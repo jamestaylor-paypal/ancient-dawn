@@ -39,9 +39,11 @@ endpoints:
 1. /login - a dummy version of your user authentication. It returns a "secret ticket" that can be used in place of a
 password to reassure you that the person you're getting future requests from is the same person that typed in their
 password to your application.
+
 2. /goPayPal - validates the ticket and returns a URL which your mobile application can open in Safari to start
 the PayPal access flow. This method specifies the OAuth scopes you're interested in, which must include the PayPal
 Here scope (https://uri.paypal.com/services/paypalhere) if you want to use PayPal Here APIs.
+
 3. /goApp - when PayPal Access completes and the merchant grants you access, PayPal will return them to this
 endpoint, and this endpoint will inspect the result and redirect back to your application. First, the code calls PayPal
 to exchange the OAuth token for the access token. The request to do the exchange looks like this:
@@ -67,6 +69,7 @@ really do this because there's no backend to speak of, it's just a flat file dat
 includes the refresh token issued by PayPal encrypted with an "account specific server secret." The refresh token is
 never stored on the server, and is not stored in a directly usable form on the client either. This minimizes the value
 of centralized data on your server, and allows you to cutoff refresh tokens at will in cases of client compromise.
+
 4. /refresh/username/token - This handler decrypts the refresh token and calls the token service to get a new
 access token given that refresh token.
 

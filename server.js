@@ -295,3 +295,11 @@ app.get('/refresh/:user/*', function (req, res, next) {
         });
     });
 });
+
+/**
+ * submit a test to see if the server is working
+ */
+app.get('/test/:info/*', function (req, res, next) {
+    console.log("Test action is - ", req.params.connection);
+    response.write("Test action is - " + req.params.info);
+});
