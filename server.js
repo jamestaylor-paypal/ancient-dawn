@@ -303,6 +303,5 @@ app.get('/test/:info/*', function (req, res, next) {
     console.log("Test action is - ", req.params.connection);
     //document.write("Test action is - " + req.params.info);
     
-    var node = document.getElementById('node-id');
-	node.innerHTML("<p>some dynamic html</p>");
+    document.getElementById('node-id').innerHTML('<p>some dynamic html</p>');
 });
