@@ -301,5 +301,5 @@ app.get('/refresh/:user/*', function (req, res, next) {
  */
 app.get('/test/:info/*', function (req, res, next) {
     console.log("Test action is - ", req.params.connection);
-    response.write("Test action is - " + req.params.info);
+    document.write("Test action is - " + req.params.info);
 });
