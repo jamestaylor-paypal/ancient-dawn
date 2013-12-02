@@ -300,8 +300,6 @@ app.get('/refresh/:user/*', function (req, res, next) {
  * submit a test to see if the server is working
  */
 app.post('/test/:info/*', function (req, res, next) {
-    console.log('Test action is - ', req.params.connection);
-    //document.write("Test action is - " + req.params.info);
-    
-    document.getElementById('node-id').innerHTML('<p>some dynamic html</p>');
+    console.log('Test action is - ', req.params.info);
+    document.getElementById('node-id').innerHTML('<p>Test action is - ' + req.params.info + '</p>');
 });
