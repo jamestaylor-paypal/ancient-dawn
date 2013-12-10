@@ -13,8 +13,7 @@ exports.CENTRAL_SERVER_MODE = true;
 // PayPal Access
 exports.MY_HOSTNAME = "http://ancient-dawn-6273.herokuapp.com";
 exports.MY_PORT = 80;
-exports.MY_APP_URL = "http://localhost:61951/return.aspx";
-//exports.MY_APP_URL = "sdksampleapp://oauth";
+exports.MY_APP_URL = "ancient-dawn-6273.herokuapp.com://oauth";
 
 // In case you want more info, modify this
 exports.PAYPAL_SCOPES = "https://uri.paypal.com/services/paypalhere openid email profile";
