@@ -1,4 +1,5 @@
 // CHANGE THESE VALUES TO MATCH YOUR DEVELOPER ACCOUNT
+// developer account = james.taylor@paypal.com
 exports.PAYPAL_APP_ID = "AX6pWxCGU2t_JewkXEsHoHaOc8kPpQ_M0P5h1QcJe6Msr6gU3RFIoa71rI_u";
 exports.PAYPAL_SECRET = "EIvAahAf6yN6OJEQiYmUBcVUXMTtciMwbAfePIerVJcDsOqLMFVPps-5A_8j";
 
