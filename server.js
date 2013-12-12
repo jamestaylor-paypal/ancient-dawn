@@ -299,8 +299,8 @@ app.get('/refresh/:user/*', function (req, res, next) {
 /**
  * submit a test to see if the server is working
  */
-app.get('/test/:info/*', function (req, res, next) {
-    console.log('Test action is - ', req.params.info);
-    //document.getElementById('node-id').innerHTML('<p>Test action is - ' + req.params.info + '</p>');
-    document.getElementById('node-id').innerHTML('<p>testing 1 2 3</p>');
+app.get('/test/:action/*', function (req, res, next) {
+    console.log('Test action - ', req.params.action);
+    var value = req.params[0];
+    res.json({"TestAction":req.params.action,"TestValue":value});
 });
